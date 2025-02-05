@@ -1,3 +1,13 @@
+---
+title: 线程创建的几种方式
+date: 2023-09-07 09:09:09
+tags: 
+  - Thread
+categories: Thread
+---
+
+
+
 # 线程创建的几种方式
 
 
