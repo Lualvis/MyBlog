@@ -122,14 +122,21 @@ public class MyCallable implements Callable<Integer> {
 
 public class Main {
     public static void main(String[] args) {
-        ExecutorService executor = Executors.newSingleThreadExecutor();
+        //通过Future实现
+        /*ExecutorService executor = Executors.newSingleThreadExecutor();
         Future<Integer> future = executor.submit(new MyCallable());
         try {
             System.out.println("callable返回值：" + future.get());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        executor.shutdown();
+        executor.shutdown();*/
+        //通过FutureTask实现
+        MyCallable myCallable = new MyCallable();
+        FutureTask<Integer> ft = new FutureTask<>(myCallable);
+        Thread thread = new Thread(ft);
+        thread.start();
+        System.out.println("callable返回值：" + ft.get());
     }
 }
 ```
