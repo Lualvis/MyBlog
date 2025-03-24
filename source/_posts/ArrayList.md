@@ -1,8 +1,10 @@
 ---
 title: ArrayList源码解析
 tages:
+  - Java集合框架
   - ArrayList
 categories:
+  - Java集合框架
   - ArrayList
 ---
 
